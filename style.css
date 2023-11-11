@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap');
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Overpass', sans-serif;
+    background: var(--Very-Dark-Blue);
+}
+.container {
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background: var(--Dark-Blue);
+    color: var(--Light-Grey);
+}
+.container.hide {
+    display: none;
+}
+.container .star {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: hsl(213, 19%, 28%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--White);
+}
+.container p {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+.container .buttons {
+    display: flex;
+    gap: 15px;
+}
+.container .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid hsl(213, 19%, 28%);
+    background-color: hsl(213, 19%, 28%);
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.container .buttons button.clicked {
+    transition: 0;
+    background-color: var(--Medium-Grey);
+}
+.container .buttons button:hover {
+    border-color: var(--Orange);
+    background-color: var(--Orange);
+}
+.container .submit-btn {
+    width: 100%;
+    padding: .8rem;
+    border-radius: 1.5rem;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    
+}
+.container .submit-btn:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: .3s;
+}
+/* Start thank you */
+.thankyou {
+    background-color: var(--Dark-Blue);
+    width: 350px;
+    height: 400px;
+    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: none;
+}
+.thankyou.show {
+    display: block;
+}
+.thankyou button {
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding: .5rem 1.5rem;
+    color: var(--Orange);
+    background-color: hsl(213, 19%, 28%);
+    font-weight: bold;
+    cursor: pointer;
+    /* border: 2px solid var(--Light-Grey); */
+    border: none;
+}
+.thankyou h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--White);
+}
+.thankyou p {
+    line-height: 1.5;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--Medium-Grey);
+}
+/* End thanks you */
